@@ -1,6 +1,8 @@
 # RGBLedDaemon
 A tiny simple daemon for controlling a single RGB Led for Raspberry Pi written in Python.
 
+While this daemon requires being sudo to start it, it doesn't require being sudo to change color and blink state of the LED in the GPIO.
+
 
 Usage
 -----
@@ -11,11 +13,11 @@ For starting the daemon, type:
 
 You can change color by typing the color:
 
-    sudo python rgbled.py color blue
+    python rgbled.py color blue
 
 You can turn blinking on by typing:
 
-    sudo python rgbled.py blink on
+    python rgbled.py blink on
 
 For stopping the daemon, type:
 
