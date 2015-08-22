@@ -56,7 +56,8 @@ class RGBLedDaemon(Daemon):
         self.rled.ChangeDutyCycle(0)
         self.gled.ChangeDutyCycle(0)
         self.bled.ChangeDutyCycle(0)
-        time.sleep(0.75)
+
+      time.sleep(0.75)
 
 
 
