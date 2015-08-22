@@ -27,8 +27,12 @@ Schematic
 
 This code uses GPIOs 5, 6 and 13, which are the pins 29, 31 and 33 in the Raspberry Pi 2 Board. Pin 6 is the GND on the same board, and I'm using it.
 
-Inline-style:
+
 ![RGB Led pinout](https://github.com/ericoporto/RGBLedDaemon/raw/master/images/rgbled_raspi_small.png "Raspberry Pi with RGB Led pinout")
+
+
+![Real Board](https://github.com/ericoporto/RGBLedDaemon/raw/master/images/real_board.jpg "Raspberry Pi with RGB Led mounted")
+
 
 My pin selection comes from the example right here: https://www.hackster.io/windowsiot/rgb-led-sample . Your RGB Led may be different.
 
