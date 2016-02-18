@@ -10,9 +10,9 @@ class RGBLedDaemon(Daemon):
     self.cf = '/tmp/rgbled-daemon.color'
     self.bf = '/tmp/rgbled-daemon.blink'
 
-    self.rpin = 17
-    self.gpin = 27
-    self.bpin = 22
+    self.rpin = 5
+    self.gpin = 6
+    self.bpin = 13
 
     #PWM frequency in Hz
     self.freq = 100
