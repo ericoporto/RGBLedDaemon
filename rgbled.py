@@ -10,9 +10,9 @@ class RGBLedDaemon(Daemon):
     self.cf = '/tmp/rgbled-daemon.color'
     self.bf = '/tmp/rgbled-daemon.blink'
 
-    self.rpin = 5
-    self.gpin = 6
-    self.bpin = 13
+    self.rpin = 17
+    self.gpin = 27
+    self.bpin = 22
 
     #PWM frequency in Hz
     self.freq = 100
@@ -93,7 +93,11 @@ class RGBLedDaemon(Daemon):
 
     Daemon.stop(self, *args, **kwargs)
 
-
+  def setcolor(self, r, g, b):
+    newcolor=r+"\n"+g+"\n"+b
+    colors= {'color': newcolor}
+    with open(self.cf, 'w') as f:
+      f.write(colors['color'])
 
   def changecolor(self, newcolor):
     colors = {'red':"255\n0\n0",
@@ -139,6 +143,9 @@ if __name__ == "__main__":
       daemon.changecolor(sys.argv[2])
     elif 'blink' == sys.argv[1]:
       daemon.changeblink(sys.argv[2])
+  elif len(sys.argv) == 5:
+    if 'set' == sys.argv[1]:
+      daemon.setcolor(sys.argv[2], sys.argv[3], sys.argv[4])
     else:
       print "Unknown command"
       sys.exit(2)
